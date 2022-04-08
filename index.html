@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <title>Document</title>
+</head>
+<body>
+   <!-- Slider starts here -->
+   <div class="owl-carousel owl-theme">
+      <div class="slide slide-1">
+          <div class="slide-content">
+              <h1>Banner 01</h1>
+          </div>
+      </div>
+      <div class="slide slide-2">
+          <div class="slide-content">
+              <h1>Banner 02</h1>
+          </div>
+      </div>
+      <div class="slide slide-3">
+          <div class="slide-content">
+              <h1>Banner 03</h1>
+          </div>
+      </div>
+  </div>
+   <!-- Ends slider -->
+
+   <!-- Product cards -->
+   <section class="products--cards">
+       <div class="products--container">
+        <div class="products--title">
+            <div class="titles">
+                <a href="#"><h2 class="active--title">Destaques</h2></a>
+                <a href="#"><h2>Mais vendidos</h2></a>
+            </div>      
+        </div>
+        <div class="cards--flex">
+     
+           <!-- The card ends here -->          
+
+            <!-- The card starts here -->
+            <div class="card">
+                <div class="card--container">  
+                    <div class="wishlist--icon">
+                        <a class=""><img src="./assets/imgs/outlined.png" alt=""></a>
+                    </div>             
+                    <img class="product--image" src="./assets/imgs/bottle 3.png" alt="">
+                    <div class="especifications">
+                        <img src="./assets/imgs/Oval Copy 2.png" alt="">
+                        <img class="product--flag" src="./assets/imgs/espanha.png" alt="">
+                    </div>
+                    <div class="product--details">
+        
+                        <div class="product--name">
+                            <h2>Toro Loco D.O.P. Utiel-Requena Tempranillo 2017</h2>
+                        </div>
+        
+                        <div class="discount">
+                            <p class="discount--price">R$ 37,40</p>
+                            <div class="desctount--porcentage">15% OFF</div>
+                        </div>
+    
+                        <div class="prices">
+                            <div class="partner--prices">
+                                <p class="parter--text">SÓCIO WINE</p>
+                                <p class="parter--price">R$<span class="strong--price"> 30</span>,00</p>
+                            </div>
+            
+                            <div class="not--partner--price">
+                                <p>NÃO SÓCIO R$ 37,40</p>
+                            </div> 
+                        </div>                 
+                    </div>  
+                    <button class="add--button">Adicionar</button>
+  
+                </div>
+            </div>  
+
+        </div>
+       </div>
+   </section>
+
+   <!-- Promocional info -->
+   <section class="promocional--info">
+       <div class="promocional--info--conatiner">
+            <p class="promocional--text">
+                Para aplicar seu desconto digite os <strong>6 primeiros dígitos</strong> do seu Cartão Porto Seguro no campo <span>“cupom de desconto”</span> e aproveite o melhor do mundo do vinho!
+            </p>
+            <div class="promocional--images">
+                <img class="credit--cards" src="./assets/imgs/Frame 128.png" alt="">
+                <img class="arrow-right" src="./assets/imgs/arrow-right.png" alt="">
+                <img class="circle--message" src="./assets/imgs/Frame 127.png" alt="">
+            </div>
+       </div>       
+   </section>
+
+   <section class="partner--benefits">
+
+       <div class="partner--benefits--title">
+            <h2>Como Sócio Wine você possui muitos benefícios.</h2s>
+       </div>
+       <div class="benefits--flex">
+            <!-- Modal window -->
+            <div id="window--modal">
+                <span id="x--close"></span>
+                <img id="image--modal">
+            </div>
+            <!-- Ends window -->
+            <div class="modal--content">
+                <button onclick='openModal("./assets/imgs/modal/Benefício/15off.png")'>
+                    <img class="small--image" id="off" src="./assets/imgs/15off.png">
+                </button>
+                <img class="modal--image" src="./assets/imgs/modal/Benefício/15off.png" alt="">
+            </div>
+            <div class="modal--content">
+                <button onclick='openModal("./assets/imgs/modal/Benefício/cashback.png")'>
+                    <img class="small--image" id="cashback" src="./assets/imgs/cashback.png">
+                </button>
+                <img class="modal--image" src="./assets/imgs/modal/Benefício/cashback.png" alt="">
+            </div>
+            <div class="modal--content">
+                <button onclick='openModal("./assets/imgs/modal/Benefício/entrega.png")'>
+                    <img class="small--image" id="entrega" src="./assets/imgs/entrega.png">
+                </button>
+                <img class="modal--image"src="./assets/imgs/modal/Benefício/entrega.png" alt="">
+            </div>
+            <div class="modal--content">
+                <button onclick='openModal("./assets/imgs/modal/Benefício/MGM.png")'>
+                    <img class="small--image"id="mgm" src="./assets/imgs/MGM.png">
+                </button>
+                <img class="modal--image"src="./assets/imgs/modal/Benefício/MGM.png" alt="">
+            </div>
+           
+       </div>
+   </section>
+
+   <section class="cupon--info">
+       <div class="cupon--info--title">
+            <h2>Saiba como assinar usando o seu cupom</h2>
+       </div>
+      
+       <div id="cupon--info--container" >
+           <div class="cupon--instructions">
+                <div class="cupon--image">
+                    <img src="./assets/imgs/Mask Group.png" alt="">
+               </div>               
+               <div class="cupo--intructions--text">
+                    <p>
+                         "Possui cupom ou código de indicação"                
+                    </p>
+                </div>
+           </div>
+
+           <div class="cupon--instructions">
+                <div class="cupon--image">
+                    <img src="./assets/imgs/Frame 127.png" alt="">
+               </div>
+               <div class="cupo--intructions--text">
+                    <p>
+                        Digite os 6 primeiros dígitos de seu cartão Porto Seguro no campo <strong>"Possui cupom ou código de indicação"</strong>              
+                    </p>
+               </div>
+
+            </div>
+
+            <div class="cupon--instructions">
+                <div class="cupon--image">
+                    <img src="./assets/imgs/Frame 39.png" alt="">
+                </div>
+                <div class="cupo--intructions--text">
+                    <p>
+                        "Possui cupom ou código de indicação"                
+                    </p>
+               </div>
+            </div>
+
+            <div class="cupon--instructions">
+                <div class="cupon--image">
+                    <img src="./assets/imgs/Frame 37.png" alt="">
+                </div>
+                <div class="cupo--intructions--text">
+                    <p>
+                        DPossui cupom ou código de indicação"                
+                    </p>
+               </div>
+            </div>
+       </div>
+   </section>
+   <!-- footer -->
+   <footer>
+       <div class="footer--container">
+            <div class="footer--images">
+                <img src="./assets/imgs/footer1.png" alt="">
+            </div>
+            <div class="footer--images">
+                <img src="./assets/imgs/footer2.png" alt="">
+            </div>
+       </div>
+    </footer>
+   
+   <!-- jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <!-- Owl Carousel config -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <!-- products json -->
+   <script src="./assets/js/products.js"></script>
+   <!-- Pre modifications -->
+   <script src="./assets/js/script.js"></script>
+   
+
+
+
+</body>
+</html>

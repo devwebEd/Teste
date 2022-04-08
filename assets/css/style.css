@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/neo-sans-pro');
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Lato;
+   box-sizing: border-box;
+}
+
+/* Cores */
+:root{
+   --white:#fff;
+   --bg--color:#f5f5f5;
+   --green:#7EBC43;
+   --light--purple:#EF4786;
+   --purple:#C50E71;
+   --dark--purple:#C81A78;
+   --footer--color:#3C214B;
+   --light--text:#A3A3A3;
+   --dark--text:#000000;
+   --orange--dot:orange;
+   --promocional--color:#002B46;
+   --promocional--purple:#B6116E;
+}
+
+body{
+   background-color: #f5f5f5;
+}
+
+/* Iniciar a composição do caroucel */
+.owl-carousel {
+   max-width: 1920px;
+   height: 48px;
+}
+
+.slide {
+   max-width: 100%;
+   height: 350px;
+   position: relative;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+.slide-1 {
+   background-image: url(../imgs/banner-01.png);
+}
+
+.slide-2 {
+   background-image: url(../imgs/banner-02.png);
+}
+
+.slide-3 {
+   background-image: url(../imgs/banner-03.png);
+}
+
+.slide-content {
+   min-width: 100%;
+   text-align: center!important;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #fff;
+   padding: 0 20%;
+}
+
+.slide-content h1 {
+   font-size: 30px;
+}
+
+.owl-dots {
+   min-width: 100%;
+   text-align: center;
+   position: absolute;
+   top: calc(350px - 30px);
+}
+
+.owl-dots span {
+   width: 12.19px !important;
+   height:  12.19px !important;
+   position: relative;
+
+   /* top: calc(350px - 38px - 12.19px); */
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot span {
+   background: #fff;
+   display: none;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: orange;
+}
+
+.owl-prev, .owl-next {
+   top:calc(175px - 24px);
+
+}
+
+.owl-prev {
+   left:394px;
+}
+
+.owl-next {
+   right: 394px;
+}
+
+/* Adjust the buttons as necessary */
+.owl-prev, .owl-next{
+   width: 48px;
+   height: 48px;
+   position: absolute;
+   background: none !important;
+}
+
+/* Do the pseudo-elements */
+.owl-prev::before, .owl-next::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background:#fff;
+   border-radius: 0% !important;
+}
+
+/* If it's necessary hover effect */
+.owl-prev:hover::before, .owl-next:hover::before{
+   background: white;
+}
+
+/* Create the arrows and put it on center*/
+.owl-prev::after, .owl-next::after {
+   content: "";
+   width: 7.5px;
+   height: 7.5px;
+   position: absolute;
+   transform: rotate(135deg);
+   border:0 solid black;
+   border-width: 0 2px 2px 0;
+   top: 50%; left: 50%;
+   margin-top: -5px;
+   margin-left: -3px;
+}
+
+/* Ajuste the arrow "next" */
+.owl-next::after {
+   transform: rotate(-45deg);
+   margin-left: -7px;
+}
+
+/* 
+   ________________________________Products Cards
+ */
+
+ .products--cards{
+    margin-top: calc(350px)!important;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    height: auto;
+    background-color: transparent;
+ }
+
+ .products--container{
+    
+    max-width: 1171px;
+    height: 490.5px;
+    margin: 0 auto;
+ }
+
+ .products--title{
+    display: inherit;
+    height: 32px;
+    background-color:transparent;
+    border-bottom: 1px solid silver;
+ }
+
+.titles{
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+   gap:16px;
+   border-bottom: 1px solid transparent;
+   height: 32px;
+   padding-bottom: 12px;
+   line-height: 42px;
+}
+
+.titles a{
+   text-decoration: none!important;
+   color: gray;
+}
+
+/* Effect actice on selected title */
+.active--title{
+   height:inherit;
+   color:var(--dark--purple);
+   border-bottom: 2px solid var(--dark--purple);  
+}
+
+/* Flex cards config starts here */
+.cards--flex{
+   padding-top: 1rem;
+   width: 100%;
+   display: flex;
+   gap: 1rem;
+}
+
+/* Model */
+.card{
+   display:none;
+   max-width: 221px!important;
+   cursor: pointer;
+   
+}
+
+.card--container{
+   justify-content: center;
+   width: 100%;
+   height:370px;
+   box-shadow: 0px 2px 2px 0px #e0e0e0;
+   background-color: var(--white);
+}
+
+.wishlist--icon{
+   max-width: 100%;
+   height:0;
+   padding-top: 8px;
+   margin-left: 188px!important;
+   position:relative; 
+}
+
+.product--image{
+   display: flex;
+   
+   justify-content: center;
+   max-width:176.8px;
+   height:183px;
+   margin:16px 21px  16px 52px ;
+}
+
+.product--details{
+   width: 205px;
+   height: 132px;
+   margin: 0 auto;
+}
+
+.product--name{
+   margin-top: 15px;
+   width: 100%;
+   min-height: 34px;
+}
+
+.product--name h2{
+   font-size: 14px;
+   text-align: center;
+}
+
+.product--details{
+   display: flex;
+   flex-direction: column;
+}
+
+.especifications{
+   display: flex;
+   gap: 8px;
+   margin-left: 14px;
+   margin-top:-60px;
+   flex-direction: column;
+   position: relative!important;
+}
+
+.especifications > img{
+   width: 16.51px;
+   height: 16px;
+}
+
+.discount{
+   margin-top: 18px!important;
+   width: 105px;
+   height: 16px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   font-size: 12px;
+   margin: 0 auto;
+}
+
+.discount--price{
+   color: gray;
+   text-decoration:line-through;
+   font-weight:bold;
+}
+
+.desctount--porcentage{
+   display: flex!important;
+   align-items: center;
+   gap: 5px!important;
+   border-radius: 2px;
+   font-size: 10px;   
+   padding: 3px 4px;
+   min-width: 48px;
+   height: 16px;
+   line-height: normal;
+   color:var(--white);
+   background-color: var(--light--purple);
+}
+
+.prices{
+   width: 205px;
+   height: 132px;
+   margin: 0 auto;
+   color: gray;
+}
+
+.partner--prices{
+   margin-top: 16px!important ;
+   font-weight: light;
+   font-size: 16px;
+   line-height: normal;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+}
+
+.parter--text{
+   line-height:10px;
+   width:32px;
+   font-size: 10px;
+   font-weight: 300;
+}
+
+.parter--price{
+   color: var(--purple)!important;
+   font-weight: 800;
+   font-size: 12px!important;
+}
+
+.strong--price{
+   font-size: 18px;
+   font-weight: 800;
+   color: var(--purple);
+}
+
+.not--partner--price{
+   margin-top: 10px;
+   text-align: center;
+   font-size: 10px;
+}
+.add--button{
+   position: relative;
+   margin-top:55px!important;
+   margin-bottom: 16px;
+   width:221px;
+   height: 40px;
+   border-radius: 4px;
+   font-size: 16px;
+   border: 0;
+   color: var(--white);
+   cursor: pointer;
+   background-color: var(--green);
+}
+
+/* Responsive cards config */
+@media only screen and (max-width:1700px) {
+   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot span {
+      display: block;
+   }
+
+   .owl-prev,.owl-next{
+      display: none!important;
+   }    
+}
+
+@media only screen and (max-width:1250px) {
+   .products--container{
+      margin-left: 29px;
+      overflow-x: hidden;
+      overflow-x: scroll;
+      overflow-y: hidden!important;
+   }
+
+}
+@media only screen and (max-width:992px) {
+   .products--container{
+      margin-left: 29px;
+   }
+}
+
+/* 
+_________________________________Promocional info starts here
+*/
+.promocional--info{
+   max-width: 1920px;
+   min-height: 408px;
+   background-color: var(--white);
+}
+
+.promocional--info--conatiner{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 1131px;
+   height: auto;
+   margin: 0 auto;
+
+}
+
+.promocional--text{
+   margin-top: 40px;
+   max-width: 821px;
+   text-align: center;
+   font-size: 22px;
+   font-weight: bold;
+   font-family: 'Neo Sans Std', sans-serif;
+   color: var(--promocional--color)!important;
+}
+
+.promocional--text strong{
+   font-size: 22px;
+   font-weight: bold;
+   font-family: 'Neo Sans Std Medium TR', sans-serif!important;
+}
+
+.promocional--text span{
+   font-family: 'Neo Sans Std Medium TR', sans-serif!important;
+   color: var(--dark--purple)!important;
+}
+
+.promocional--images{
+   display: flex;
+   align-items:center;
+   margin-top: 45px;
+   margin-bottom: 32px;
+   gap: 26px;
+   width:691px;
+   height:228px;
+}
+
+.credit--cards{
+   width: 367px;
+   height: 228px;
+}
+
+.arrow--right{
+   width:37.16px;
+   height: 37.16px;
+}
+
+.circle--message{
+   width: 200px;
+   height: 200px;
+}
+
+/* Responsive promocional info area */
+@media only screen and (max-width:1220px) {
+   .promocional--info{
+      max-width:100%!important;
+      min-height: auto!important;
+   }
+
+   .promocional--info--conatiner{
+      max-width: 100%!important;
+      min-height: 656px !important;
+ 
+   }
+   .promocional--text{
+      min-width: 293px;
+      min-height:101px;  
+      padding-top: 45px;
+      margin-bottom: 28px; 
+      margin: 0 auto;
+   }
+
+   .credit--cards{
+      min-width: 261px!important;
+      height: auto;
+      object-fit: cover;
+   }
+   .arrow-right{
+      min-width: 26px;
+      min-height: 26px;
+      transform: rotate(90deg);
+   }
+   .circle--message{
+      min-width: 144px;
+      height: auto;
+      object-fit: cover;
+   }
+
+   .promocional--images{
+      max-width: 100%;
+      height: auto;
+      flex-direction: column;  
+   }
+}
+@media only screen and (max-width:520px) {
+
+   .promocional--text{
+      max-width: 293px;
+      min-height:101px;  
+      margin-bottom: 28px; 
+      margin: 0 auto;
+      line-height:24px;
+      font-size:15px!important;
+   }
+
+   .promocional--text strong{
+      font-size:15px!important;
+   }
+   
+   .promocional--text span{
+      font-size:15px!important;
+   }  
+
+   .credit--cards{
+      max-width: 261px!important;
+      height: auto;
+   }
+
+   .arrow-right{
+      max-width: 26px;
+      max-height: 26px;
+   }
+   
+   .circle--message{
+      max-width: 144px;
+      height: auto;
+   }
+
+   .promocional--images{
+      max-width: 100%;
+      height: auto;
+      flex-direction: column;  
+   }
+}
+   
+/* 
+_________________________________Partner benefits info
+ */
+
+.partner--benefits{
+   max-width: 1920px;
+   min-height: 335px;
+   background-color: var(--bg--color);
+}
+
+.partner--benefits--title{
+   text-align: center;
+   max-width:773px;
+   margin: 0 auto;
+}
+
+.partner--benefits--title > h2{
+  margin-top: 65px;
+  font-size: 22px!important;
+  font-weight: bold;
+  font-family: 'Neo Sans Std', sans-serif;
+}
+
+.benefits--flex{
+   padding-top: 76px;
+   padding-bottom: 87px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 24px;
+   align-items: center;
+}
+
+.benefits--flex button{
+   border: none;
+   background-color: var(--white);
+}
+
+.modal--content{
+   width: auto;
+   height: auto;
+}
+
+.small--image{
+   cursor: pointer;
+   width: 274.1px;
+   height: 83px;
+}
+
+#window--modal{
+   display: none;
+   width: 100%;
+   height:100vh;
+   background-color: rgba(0, 0, 0, 0.233);
+   position: fixed;
+   top:0px;
+   left: 0;
+   z-index: 4;
+}
+.modal--image{
+   display: none;
+}
+
+#image--modal{
+   display: block;
+   position: fixed;
+   z-index: 3;
+   top: calc(50% - 149.5px);
+   left: calc(50% - 165.5px);
+   cursor: pointer;
+}
+
+#x--close{
+   cursor: pointer;
+   position: fixed;
+   z-index: 4;
+   top: calc(50% - 149.5px);
+   left: calc(50% - 150.5px);
+   width: 299px;
+   height: 365px;
+   background-color:transparent;
+}
+
+ @media only screen and (max-width:620px) {
+   .partner--benefits--title > h2{
+      max-width: 221px;
+      padding-top: 56px;
+      margin: 0 auto;
+      font-size: 15px!important;
+   }
+   
+   .benefits--flex{
+      padding-top: 46px;
+      padding-bottom: 60px;
+   }
+
+}
+
+/* 
+_______________________Cupon info
+*/
+.cupon--info{
+   max-width: 1920px;
+   height: 480px;
+}
+
+.cupon--info--title{
+   min-width: 100%;
+   text-align: center;
+}
+
+.cupon--info--title h2{
+   margin: 0 auto;
+   max-width: 563px;
+   /* padding-top: 54px; */
+   padding-bottom: 69px;
+   margin-top: 26px;
+   font-size: 22px!important;
+   font-family: 'Neo Sans Std Medium TR', sans-serif!important;
+ }
+
+#cupon--info--container{
+   display: flex;   
+   flex-wrap: wrap;
+   align-items: center!important;
+   justify-content: space-between;
+   margin: 0 auto;
+   padding-bottom: 85px;
+   max-width: 1139.36px;
+   min-height: 273.99px;
+}
+
+.cupon--instructions{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   max-width: 273px;
+   height: 243.33;
+}
+.cupon--image{
+   width: 169.12px;
+   max-height: 169.34px;
+}
+
+.cupon--instructions img{
+   width:100%;
+   height: 100%;
+}
+
+.cupo--intructions--text{
+   position: relative;
+   padding-top: 18px;
+   text-align: center;
+   max-width: 273px;
+   height: 55px;
+}
+
+.cupo--intructions--text p{
+   color: #7a7a7a;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 20px;
+   font-family: 'Neo Sans Std Medium TR', sans-serif!important;
+}
+.cupo--intructions--text p strong{
+   color: #3D3D60;
+}
+
+@media only screen and (max-width:1220px) {
+   .cupon--instructions{
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      min-height: 494px;
+   }   
+
+   .cupon--info--title h2{
+      max-height: 35px;
+      margin-bottom: 63px;
+      padding-bottom: 0px;
+   }
+  
+  
+
+   #cupon--info--container{
+      display: flex;   
+      align-items: center!important;
+      justify-content: center;
+      margin: 0 auto;
+      padding-bottom: 85px;
+      max-width: 100%;
+      min-height: 273.99px;
+   }
+
+}
+@media only screen and (max-width:720px) {
+   .cupon--info--title h2{
+      font-size: 15px!important;
+      max-width: 164px;
+   }
+}
+
+/* 
+_________________________________footer
+ */
+ 
+ footer{
+    max-width: 1920px;
+    max-height: 677px;
+    /* bottom: 0px!important; */
+    background-color: var(--footer--color);
+ }
+
+ .footer--container{
+    display: flex;
+    justify-content: center ;
+    gap: 82px;
+    height: auto;
+    padding-top: 95px;
+    padding-bottom: 95px;
+ }
+
+ .footer--images{
+   max-width: auto;
+   max-height: auto;
+ }
+
+ @media only screen and (max-width:1220px) {
+
+   footer{
+      max-width: 100%;
+      min-height: 642px;
+      margin-top: 38px;
+      padding-bottom: 50px!important;
+   }
+   
+   .footer--container{
+      display: flex;
+      gap: 44px!important;
+      flex-wrap: wrap;
+      padding-bottom: 0!important;
+   }
+
+   .footer--images{
+      max-width: 256px;
+      max-height: 256px;
+    }
+    .footer--images img{
+       width: 100%;
+       height: 100%;
+    }
+
+ }
